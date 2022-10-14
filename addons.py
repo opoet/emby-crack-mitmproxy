@@ -11,7 +11,7 @@ class ModifyResponse:
     def response(self, flow):
         # 拦截指定的url
         if flow.request.url.startswith("https://mb3admin.com/admin/service/registration/validateDevice"):
-            res = '{"cacheExpirationDays":365,"message":"Device Valid","resultCode":"GOOD"}'
+            res = '{"cacheExpirationDays":999,"message":"Device Valid","resultCode":"GOOD"}'
             self.HackEmbyVerifyRes(flow, res)
         elif flow.request.url.startswith("https://mb3admin.com/admin/service/registration/validate"):
             res = '{"featId": "","registered": true,"expDate": "2099-01-01","key": ""}'
